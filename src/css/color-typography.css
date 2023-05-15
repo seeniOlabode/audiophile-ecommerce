@@ -1,0 +1,96 @@
+/* COLORS */
+
+:root {
+  --brown-200: #d87d4a;
+  --dark-200: #101010;
+  --gray-200: #f1f1f1;
+  --brown-100: #fbaf85;
+  --gray-100: #fafafa;
+  --white: #ffffff;
+  --black: #000000;
+
+  --error: #cd2c2c;
+}
+
+/* END COLORS */
+
+/* TYPOGRAPHY */
+
+@define-mixin headings {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1.heading-1 {
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+  @mixin headings;
+}
+
+h2.heading-2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+  @mixin headings;
+}
+
+h3.heading-3 {
+  font-size: 34px;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+  @mixin headings;
+}
+
+h4.heading-4 {
+  font-size: 28px;
+  line-height: 38.25px;
+  letter-spacing: 2px;
+  @mixin headings;
+}
+
+h5.heading-5 {
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+  @mixin headings;
+}
+
+h6.heading-6 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+  @mixin headings;
+}
+
+p.overline {
+  color: var(--brown-200);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 10px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+p.sub-title {
+  color: var(--brown-200);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+p.body {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+/* END TYPOGRAPHY */

@@ -1,0 +1,31 @@
+@import "./css/color-typography.css";
+
+/* CUSTOM RESETS */
+
+* {
+  box-sizing: border-box;
+}
+
+/* END CUSTOM RESETS */
+
+/* EXTERNAL COMPONENTS STYLING */
+
+/* END EXTERNAL COMPONENTS STYLING */
+
+/* GENERIC ANIMATIONS */
+
+.generic-slideup {
+  animation: generic-slideup 0.2s;
+}
+
+@keyframes generic-slideup {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* END GENERIC ANIMATIONS */

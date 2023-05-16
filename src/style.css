@@ -1,9 +1,28 @@
 @import "./css/color-typography.css";
 
+/* MEDIA QUERIES SET */
+
+@custom-media --small-viewport (max-width: 768px);
+@custom-media --xs-small-viewport (max-width: 480px);
+@custom-media --medium-viewport (max-width: 1024px);
+@custom-media --large-viewport (max-width: 1300px);
+
+/* END MEDIA QUERIES SET */
+
 /* CUSTOM RESETS */
 
 * {
   box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* END CUSTOM RESETS */
@@ -29,3 +48,28 @@
 }
 
 /* END GENERIC ANIMATIONS */
+
+/* LAYOUT */
+
+.inner-container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+}
+
+@media (--small-viewport) {
+  .inner-container {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (--large-viewport) {
+  .inner-container {
+    padding: 0 24px;
+  }
+}
+
+/* END LAYOUT */

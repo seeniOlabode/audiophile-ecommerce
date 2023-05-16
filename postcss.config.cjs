@@ -5,5 +5,6 @@ module.exports = {
         "postcss-import": {},
         "postcss-nesting": {},
         "autoprefixer": {},
+        "postcss-custom-media": {},
     }
 }

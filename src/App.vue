@@ -1,26 +1,26 @@
 <template>
-  <div class="theme-test">
-    <action-button text="shop" variant="secondary" />
-  </div>
+  <site-header />
+  <home-page />
 </template>
 
 <script>
 import ActionButton from "./components/shared/ActionButton.vue";
+import SiteHeader from "./components/SiteHeader.vue";
+import HomePage from "./components/home/HomePage.vue";
 
 export default {
   name: "App",
   components: {
+    SiteHeader,
+    HomePage,
     ActionButton,
   },
 };
 </script>
 
 <style>
-.theme-test {
+#app {
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 </style>

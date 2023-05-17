@@ -114,6 +114,7 @@ button {
   justify-content: center;
   cursor: pointer;
   font-weight: 700;
+  width: fit-content;
 
   .icon {
     display: none;

@@ -125,7 +125,8 @@ footer {
 }
 
 .inner-container {
-  padding: 52px;
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
 
 .logo-nav {

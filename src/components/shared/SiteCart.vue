@@ -63,6 +63,10 @@ export default {
   transform: translateY(100%);
   transition: transform 0.5s;
   height: 100%;
+  max-width: 500px;
+  position: absolute;
+  width: 100%;
+  right: 0;
 }
 .cart {
   position: fixed;

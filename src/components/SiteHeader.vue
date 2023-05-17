@@ -140,7 +140,7 @@ export default {
   }
 }
 @custom-media --small-viewport (max-width: 768px);
-@custom-media --xs-small-viewport (max-width: 480px);
+@custom-media --xs-small-viewport (max-width: 600px);
 
 header {
   /* background: #000000; */

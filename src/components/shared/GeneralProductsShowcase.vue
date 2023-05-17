@@ -41,7 +41,7 @@ export default {
 .product {
   text-align: center;
   background: var(--gray-200);
-  flex-basis: 100%;
+  flex-basis: 30%;
   border-radius: 8px;
   padding: 30px;
   padding-top: 116px;
@@ -67,6 +67,34 @@ export default {
 
   > h6 {
     text-align: center;
+  }
+}
+
+@custom-media --small-viewport (max-width: 768px);
+@custom-media --xs-small-viewport (max-width: 600px);
+@custom-media --medium-viewport (max-width: 1024px);
+@custom-media --large-viewport (max-width: 1300px);
+
+@media (--medium-viewport) {
+  .general-product-showcase {
+  }
+  .product {
+    flex-basis: 30%;
+  }
+}
+
+@media (--small-viewport) {
+  .general-product-showcase {
+  }
+
+  .product {
+    flex-basis: 30%;
+  }
+}
+
+@media (--xs-small-viewport) {
+  .product {
+    flex-basis: 100%;
   }
 }
 </style>

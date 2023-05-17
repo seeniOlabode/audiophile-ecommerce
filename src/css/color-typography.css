@@ -106,7 +106,7 @@ p.body {
 }
 
 @custom-media --small-viewport (max-width: 768px);
-@custom-media --xs-small-viewport (max-width: 480px);
+@custom-media --xs-small-viewport (max-width: 600px);
 
 @media (--xs-small-viewport) {
   h1.heading-1 {

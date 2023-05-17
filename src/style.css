@@ -3,7 +3,7 @@
 /* MEDIA QUERIES SET */
 
 @custom-media --small-viewport (max-width: 768px);
-@custom-media --xs-small-viewport (max-width: 480px);
+@custom-media --xs-small-viewport (max-width: 600px);
 @custom-media --medium-viewport (max-width: 1024px);
 @custom-media --large-viewport (max-width: 1300px);
 
@@ -52,7 +52,7 @@ button {
 /* LAYOUT */
 
 .inner-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   min-width: 0;

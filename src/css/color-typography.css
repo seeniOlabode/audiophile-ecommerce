@@ -97,6 +97,7 @@ p.sub-title {
   font-size: 13px;
   line-height: 25px;
   letter-spacing: 1px;
+  @mixin headings;
 }
 
 p.body {

@@ -21,8 +21,8 @@ export default {
 </script>
 
 <style scoped>
-@custom-media --mobile (max-width: 768px);
-@custom-media --mobile-tablet (max-width: 600px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --mobile-tablet (max-width: 768px);
 @custom-media --tablet-pc (max-width: 1024px);
 @custom-media --pc (max-width: 1300px);
 

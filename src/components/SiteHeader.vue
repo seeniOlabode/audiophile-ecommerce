@@ -91,12 +91,12 @@ export default {
       const scrollPos = documentElement.scrollTop;
       const headerHeight = headerRect.height;
       if (scrollPos == 0) {
-        headerInnerElement.style.setProperty("--element-height", "94px");
+        documentElement.style.setProperty("--element-height", "94px");
         headerElement.style.setProperty("--element-background", "none");
       } else if (scrollPos < this.lastScrollTop) {
-        headerInnerElement.style.setProperty("--element-height", "94px");
+        documentElement.style.setProperty("--element-height", "94px");
       } else if (scrollPos > headerHeight) {
-        headerInnerElement.style.setProperty("--element-height", "50px");
+        documentElement.style.setProperty("--element-height", "50px");
         headerElement.style.setProperty("--element-background", "black");
       }
       this.lastScrollTop = scrollPos;
@@ -106,6 +106,10 @@ export default {
 </script>
 
 <style scoped>
+:global(:root) {
+  --element-height: 94px;
+}
+
 #custom-burger {
   .custom-burger-stick {
     transition: transform 0.2s;
@@ -158,10 +162,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  --element-height: 94px;
   --element-background: none;
   height: var(--element-height);
-  transition: height 0.5s;
+  transition: height 0.2s;
   background: var(--element-background);
 }
 

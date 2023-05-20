@@ -95,7 +95,7 @@ export default {
         headerElement.style.setProperty("--element-background", "none");
       } else if (scrollPos < this.lastScrollTop) {
         documentElement.style.setProperty("--element-height", "94px");
-      } else if (scrollPos > headerHeight) {
+      } else if (scrollPos != 0) {
         documentElement.style.setProperty("--element-height", "50px");
         headerElement.style.setProperty("--element-background", "black");
       }
@@ -154,6 +154,7 @@ header {
   left: 0;
   z-index: 10;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  background: var(--element-background-alt);
   background: var(--element-background);
   color: white;
 }

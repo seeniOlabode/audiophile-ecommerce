@@ -1,45 +1,53 @@
 <template>
   <div class="radio-group-container">
+    <label for="" class="field-label"> {{ title }} </label>
     <label
       v-for="(sin, i) in singles"
-      :key="sin.name + i + dataName"
-      :for="sin.name + i"
+      :key="sin + i + dataName"
+      :for="(sin + i).replace(/ /g, '')"
       class="radio-group-member"
+      :class="{ checked: sin == selected }"
     >
       <span class="radio-span">
         <input
-          :id="sin.name + i"
+          :id="(sin + i).replace(/ /g, '')"
           type="radio"
           class="member-radio"
           v-model="paymentMethod"
-          :value="sin.name"
+          :value="sin"
+          @click="selected = sin"
         />
       </span>
-      <label :for="sin.name + i" class="radio-group-member-label">{{
-        sin.name
-      }}</label>
+      <label
+        :for="(sin + i).replace(/ /g, '')"
+        class="radio-group-member-label"
+        >{{ sin }}</label
+      >
     </label>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    singles: {
+      type: Array,
+      required: true,
+      default: ["e-Money", "Cash", "Bank Transfer"],
+    },
+    title: {
+      type: String,
+      required: true,
+      default: "List",
+    },
+  },
   data() {
     return {
       paymentMethod: "",
-      singles: [
-        {
-          name: "e-Money",
-        },
-        {
-          name: "Cash",
-        },
-        {
-          name: "Bank Transfer",
-        },
-      ],
+      selected: "",
     };
   },
+  computed: {},
 };
 </script>
 
@@ -51,6 +59,13 @@ export default {
   padding: 18px 24px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.field-label {
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-block;
+  text-transform: capitalize;
 }
 
 .radio-group-container {
@@ -94,7 +109,7 @@ export default {
     }
   }
 
-  &:has(.member-radio:checked) {
+  &.checked {
     border-color: var(--brown-200);
     outline: none;
 

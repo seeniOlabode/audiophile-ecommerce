@@ -6,14 +6,26 @@
         <span class="wrapper"> Wrong format </span>
       </span>
     </div>
-    <input type="text" class="field-input" placeholder="Insert your name" />
+    <input type="text" class="field-input" :placeholder="placeholder" />
   </div>
 </template>
 
 <script>
 export default {
   name: "TextField",
-  props: ["title"],
+  // props: ["title"],
+  props: {
+    title: {
+      type: String,
+      required: false,
+      default: "Unamed",
+    },
+    placeholder: {
+      type: String,
+      required: false,
+      default: "Type your data",
+    },
+  },
 };
 </script>
 

@@ -23,7 +23,7 @@ export default {
       if (scrollPos == 0 || scrollPos < this.lastScrollTop) {
         categoryElement.style.setProperty("--heading-element-height", "100px");
         categoryElement.style.setProperty("--heading-font-size", "40px");
-      } else if (scrollPos > mainHeaderHeight / 2) {
+      } else if (scrollPos != 0) {
         categoryElement.style.setProperty("--heading-element-height", "50px");
         categoryElement.style.setProperty("--heading-font-size", "15px");
       }

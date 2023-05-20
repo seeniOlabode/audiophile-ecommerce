@@ -22,6 +22,7 @@
 .heading-4,
 .heading-5,
 .heading-6,
+.sub-title,
 .body,
 .overline {
   margin: 0;
@@ -91,7 +92,7 @@ p.overline {
   text-transform: uppercase;
 }
 
-p.sub-title {
+h6.sub-title {
   color: var(--brown-200);
   font-weight: 700;
   font-size: 13px;
